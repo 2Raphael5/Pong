@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_futur-en-tout-genre\\pong\\pong\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_futur-en-tout-genre\\pong\\pong\\class\\menu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\menu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_futur-en-tout-genre\\pong\\pong\\class\\input\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\input\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_futur-en-tout-genre\\pong\\pong\\class\\input\\mouseinputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\input\\mouseinputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_futur-en-tout-genre\\pong\\pong\\class\\input\\inputaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\input\\inputaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_futur-en-tout-genre\\pong\\pong\\class\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_futur-en-tout-genre\\pong\\pong\\class\\generic\\pixelgeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\generic\\pixelgeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_futur-en-tout-genre\\pong\\pong\\class\\generic\\spritegeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\generic\\spritegeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Input\\InputManager.cs",
+              "RelativeDocumentMoniker": "Pong\\Class\\Input\\InputManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Input\\InputManager.cs",
+              "RelativeToolTip": "Pong\\Class\\Input\\InputManager.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T08:14:03.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InputAction.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Input\\InputAction.cs",
+              "RelativeDocumentMoniker": "Pong\\Class\\Input\\InputAction.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Input\\InputAction.cs",
+              "RelativeToolTip": "Pong\\Class\\Input\\InputAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T08:14:02.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MouseInputManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Input\\MouseInputManager.cs",
+              "RelativeDocumentMoniker": "Pong\\Class\\Input\\MouseInputManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Input\\MouseInputManager.cs",
+              "RelativeToolTip": "Pong\\Class\\Input\\MouseInputManager.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwAIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T08:01:01.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Menu\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Pong\\Class\\Menu\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Menu\\MainMenu.cs",
+              "RelativeToolTip": "Pong\\Class\\Menu\\MainMenu.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T07:58:57.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameStateManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\GameStateManager.cs",
+              "RelativeDocumentMoniker": "Pong\\Class\\GameStateManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\GameStateManager.cs",
+              "RelativeToolTip": "Pong\\Class\\GameStateManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T07:55:46.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SpriteGeneric.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Generic\\SpriteGeneric.cs",
+              "RelativeDocumentMoniker": "Pong\\Class\\Generic\\SpriteGeneric.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Generic\\SpriteGeneric.cs",
+              "RelativeToolTip": "Pong\\Class\\Generic\\SpriteGeneric.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T07:53:58.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PixelGeneric.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Generic\\PixelGeneric.cs",
+              "RelativeDocumentMoniker": "Pong\\Class\\Generic\\PixelGeneric.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Class\\Generic\\PixelGeneric.cs",
+              "RelativeToolTip": "Pong\\Class\\Generic\\PixelGeneric.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T07:53:46.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Game1.cs",
+              "RelativeDocumentMoniker": "Pong\\Game1.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Futur-En-Tout-Genre\\Pong\\Pong\\Game1.cs",
+              "RelativeToolTip": "Pong\\Game1.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T07:51:46.314Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
