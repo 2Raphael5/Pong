@@ -1,8 +1,11 @@
 ﻿using Class;
+using Class.DebugTools;
+using Class.Generic;
 using Class.Menu;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Pong.Class.Play;
 using Simulation_etre_vivant.Class.Input;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -27,6 +30,9 @@ namespace Pong
 
         SpriteFont _font;
 
+        List<Player> _players;
+        Ball _ball;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -40,9 +46,14 @@ namespace Pong
             GameStateManager.ChangeState(GameState.Menu);
             _input = new InputManager();
             _mainMenu = new MainMenu();
-
-
+            _players = new List<Player>
+            {
+                new Player(new PixelGeneric(new Vector2(0,(Window.ClientBounds.Height-50) / 2), Color.White), 10, 50, new Vector2(0,0)),
+                new Player(new PixelGeneric(new Vector2(Window.ClientBounds.Width-10,(Window.ClientBounds.Height-50) / 2), Color.White), 10, 50, new Vector2(0,0)),
+            };
+            //_ball = new Ball();
             _font = Content.Load<SpriteFont>("Font/Font");
+            PrimitiveRenderer.Initialize(GraphicsDevice);
             base.Initialize();
         }
 
@@ -85,7 +96,7 @@ namespace Pong
             {
                 if (_mainMenu.SelectedIndex == 0)
                 {
-                    //ResetSimulation();
+                    ResetGame();
                 }
                 else
                 {
@@ -95,7 +106,10 @@ namespace Pong
         }
         private void UpdatePlaying(float deltaTime)
         {
-
+            for (int i = 0; i < _players.Count; i++)
+            {
+                _players[i].Update(deltaTime, _input, i, this);
+            }
         }
         private void UpdatePause()
         {
@@ -126,7 +140,15 @@ namespace Pong
         }
         private void DrawPlaying(SpriteBatch _spriteBatch)
         {
-
+            GraphicsDevice.Clear(Color.Black);
+            _players.ForEach(e => e.Draw(_spriteBatch));
+            //_ball.Draw(_spriteBatch);
+        }
+        
+        
+        private void ResetGame()
+        {
+            GameStateManager.ChangeState(GameState.Playing);
         }
     }
 }
