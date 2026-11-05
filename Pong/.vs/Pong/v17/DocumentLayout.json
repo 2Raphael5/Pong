@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\play\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\play\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\input\\inputaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\input\\inputaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\input\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\input\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\play\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\play\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,40 +23,32 @@
       "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\generic\\pixelgeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\generic\\pixelgeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\debugtools\\primitiverenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\debugtools\\primitiverenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\play\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\play\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\generic\\spritegeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\generic\\spritegeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\menu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\menu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\generic\\pixelgeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\generic\\pixelgeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\input\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\input\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\menu\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\menu\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\input\\mouseinputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\input\\mouseinputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\input\\inputaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\input\\inputaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\debugtools\\primitiverenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\debugtools\\primitiverenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|c:\\users\\admin\\documents\\cfpti\\2026-2027\\atap\\07_pong\\pong\\pong\\pong\\class\\menu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985239AB-0EE7-4CF0-B6F9-F4504E0F0226}|Pong\\Pong.csproj|solutionrelative:pong\\class\\menu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,58 +70,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PrimitiveRenderer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\DebugTools\\PrimitiveRenderer.cs",
-              "RelativeDocumentMoniker": "Pong\\Class\\DebugTools\\PrimitiveRenderer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\DebugTools\\PrimitiveRenderer.cs",
-              "RelativeToolTip": "Pong\\Class\\DebugTools\\PrimitiveRenderer.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAASwBAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T12:01:42.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Ball.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Play\\Ball.cs",
               "RelativeDocumentMoniker": "Pong\\Class\\Play\\Ball.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Play\\Ball.cs",
               "RelativeToolTip": "Pong\\Class\\Play\\Ball.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvx0AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAiwE0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-04T11:49:46.946Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Play\\Player.cs",
-              "RelativeDocumentMoniker": "Pong\\Class\\Play\\Player.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Play\\Player.cs",
-              "RelativeToolTip": "Pong\\Class\\Play\\Player.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADgvxYAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T11:49:39.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "InputManager.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Input\\InputManager.cs",
               "RelativeDocumentMoniker": "Pong\\Class\\Input\\InputManager.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Input\\InputManager.cs",
               "RelativeToolTip": "Pong\\Class\\Input\\InputManager.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAUwFEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:14:03.663Z"
+              "WhenOpened": "2026-11-03T08:14:03.663Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "InputAction.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Input\\InputAction.cs",
               "RelativeDocumentMoniker": "Pong\\Class\\Input\\InputAction.cs",
@@ -125,7 +104,34 @@
               "RelativeToolTip": "Pong\\Class\\Input\\InputAction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:14:02.142Z"
+              "WhenOpened": "2026-11-03T08:14:02.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Game1.cs",
+              "RelativeDocumentMoniker": "Pong\\Game1.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Game1.cs",
+              "RelativeToolTip": "Pong\\Game1.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAmwEwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T07:51:46.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Play\\Player.cs",
+              "RelativeDocumentMoniker": "Pong\\Class\\Play\\Player.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Play\\Player.cs",
+              "RelativeToolTip": "Pong\\Class\\Play\\Player.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T11:49:39.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -135,13 +141,14 @@
               "RelativeDocumentMoniker": "Pong\\Class\\Input\\MouseInputManager.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Input\\MouseInputManager.cs",
               "RelativeToolTip": "Pong\\Class\\Input\\MouseInputManager.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwAIAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:01:01.47Z"
+              "WhenOpened": "2026-11-03T08:01:01.47Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Menu\\MainMenu.cs",
               "RelativeDocumentMoniker": "Pong\\Class\\Menu\\MainMenu.cs",
@@ -153,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "GameStateManager.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\GameStateManager.cs",
               "RelativeDocumentMoniker": "Pong\\Class\\GameStateManager.cs",
@@ -161,7 +168,8 @@
               "RelativeToolTip": "Pong\\Class\\GameStateManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T07:55:46.902Z"
+              "WhenOpened": "2026-11-03T07:55:46.902Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -171,36 +179,48 @@
               "RelativeDocumentMoniker": "Pong\\Class\\Generic\\SpriteGeneric.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Generic\\SpriteGeneric.cs",
               "RelativeToolTip": "Pong\\Class\\Generic\\SpriteGeneric.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAIwC8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-03T07:53:58.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "PixelGeneric.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Generic\\PixelGeneric.cs",
               "RelativeDocumentMoniker": "Pong\\Class\\Generic\\PixelGeneric.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Generic\\PixelGeneric.cs",
               "RelativeToolTip": "Pong\\Class\\Generic\\PixelGeneric.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAArwB0AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-03T07:53:46.015Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Game1.cs",
-              "RelativeDocumentMoniker": "Pong\\Game1.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Game1.cs",
-              "RelativeToolTip": "Pong\\Game1.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAAAG4AAAAiAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Hud.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Menu\\Hud.cs",
+              "RelativeDocumentMoniker": "Pong\\Class\\Menu\\Hud.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\Menu\\Hud.cs",
+              "RelativeToolTip": "Pong\\Class\\Menu\\Hud.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T07:51:46.314Z",
+              "WhenOpened": "2026-11-04T14:02:09.5Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PrimitiveRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\DebugTools\\PrimitiveRenderer.cs",
+              "RelativeDocumentMoniker": "Pong\\Class\\DebugTools\\PrimitiveRenderer.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\CFPTI\\2026-2027\\ATAP\\07_Pong\\Pong\\Pong\\Pong\\Class\\DebugTools\\PrimitiveRenderer.cs",
+              "RelativeToolTip": "Pong\\Class\\DebugTools\\PrimitiveRenderer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAASwBAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T12:01:42.222Z"
             }
           ]
         }

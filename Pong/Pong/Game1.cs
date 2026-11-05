@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pong.Class.Play;
 using Simulation_etre_vivant.Class.Input;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using ButtonState = Microsoft.Xna.Framework.Input.ButtonState;
@@ -23,21 +24,43 @@ namespace Pong
     {
         private InputManager _input;
         private MainMenu _mainMenu;
+        private Hud _hud;
 
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
 
         SpriteFont _font;
+        SpriteFont _pixelart;
 
         List<Player> _players;
         Ball _ball;
+
+        public int scoreP1;
+        public int scoreP2;
+
+        public const int VirtualWidth = 1920;
+        public const int VirtualHeight = 1080;
+        private bool _resizing;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+
+            Window.AllowUserResizing = true;
+            _graphics.PreferredBackBufferWidth = VirtualWidth;
+            _graphics.PreferredBackBufferHeight = VirtualHeight;
+
+            Window.ClientSizeChanged += (s, e) =>
+            {
+                if (_resizing) return;
+                _resizing = true;
+                _graphics.PreferredBackBufferWidth = Window.ClientBounds.Width;
+                _graphics.PreferredBackBufferHeight = Window.ClientBounds.Height;
+                _graphics.ApplyChanges();
+                _resizing = false;
+            };
         }
 
         protected override void Initialize()
@@ -45,15 +68,27 @@ namespace Pong
             // TODO: Add your initialization logic here
             GameStateManager.ChangeState(GameState.Menu);
             _input = new InputManager();
-            _mainMenu = new MainMenu();
-            _players = new List<Player>
+            _mainMenu = new MainMenu(); _players = new List<Player>
             {
-                new Player(new PixelGeneric(new Vector2(0,(Window.ClientBounds.Height-50) / 2), Color.White), 10, 50, new Vector2(0,0)),
-                new Player(new PixelGeneric(new Vector2(Window.ClientBounds.Width-10,(Window.ClientBounds.Height-50) / 2), Color.White), 10, 50, new Vector2(0,0)),
+                new Player(new PixelGeneric(new Vector2(0, (VirtualHeight - 50) / 2), Color.White), 10, 50, Vector2.Zero),
+                new Player(new PixelGeneric(new Vector2(VirtualWidth - 10, (VirtualHeight - 50) / 2), Color.White), 10, 50, Vector2.Zero),
             };
-            //_ball = new Ball();
+            Texture2D ballTexture = Content.Load<Texture2D>("Img/football");
+            Random rnd = new Random();
+            Vector2 direction = new Vector2(rnd.Next(-500, 500), rnd.Next(-500, 500)); 
+            do
+            {
+                direction = new Vector2(rnd.Next(-500, 500), rnd.Next(-500, 500));
+            }
+            while ((direction.X > -250 && direction.X < 250) || (direction.Y > -250 && direction.Y < 250));
+            direction = new Vector2(rnd.Next(-500, 500), rnd.Next(-500, 500));
+            _ball = new Ball(new SpriteGeneric(ballTexture), direction);
+            _ball.SpriteGeneric.Position = new Vector2(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2);
             _font = Content.Load<SpriteFont>("Font/Font");
+            _pixelart = Content.Load<SpriteFont>("Font/pixelart");
+            _hud = new Hud(_pixelart);
             PrimitiveRenderer.Initialize(GraphicsDevice);
+            _ball.SpriteGeneric.Position = new Vector2(VirtualWidth / 2, VirtualHeight / 2);
             base.Initialize();
         }
 
@@ -110,6 +145,7 @@ namespace Pong
             {
                 _players[i].Update(deltaTime, _input, i, this);
             }
+            _ball.Update(deltaTime, this, _players);
         }
         private void UpdatePause()
         {
@@ -117,38 +153,71 @@ namespace Pong
         }
         protected override void Draw(GameTime gameTime)
         {
+            int w = GraphicsDevice.PresentationParameters.BackBufferWidth;
+            int h = GraphicsDevice.PresentationParameters.BackBufferHeight;
+
+            // Fond noir sur toute la fenêtre (bandes noires)
+            GraphicsDevice.Viewport = new Viewport(0, 0, w, h);
             GraphicsDevice.Clear(Color.Black);
-            _spriteBatch.Begin();
+
+            // Échelle uniforme + zone de jeu centrée
+            float scale = Math.Min(w / (float)VirtualWidth, h / (float)VirtualHeight);
+            int vw = (int)(VirtualWidth * scale);
+            int vh = (int)(VirtualHeight * scale);
+            GraphicsDevice.Viewport = new Viewport((w - vw) / 2, (h - vh) / 2, vw, vh);
+
+            _spriteBatch.Begin(transformMatrix: Matrix.CreateScale(scale, scale, 1f));
+
             switch (GameStateManager.CurrentState)
             {
                 case GameState.Menu:
                     DrawMenu();
                     break;
                 case GameState.Playing:
-                    DrawPlaying(_spriteBatch);
+                    DrawPlaying();
+                    DrawHUD();
                     break;
             }
-            base.Draw(gameTime);
 
             _spriteBatch.End();
+            base.Draw(gameTime);
         }
 
         private void DrawMenu()
         {
             Vector2 textSize = _font.MeasureString("Play");
-            _mainMenu.Draw(_spriteBatch, _font, new Vector2((_graphics.PreferredBackBufferWidth - textSize.X) / 2f, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2f));
+            _mainMenu.Draw(_spriteBatch, _font,
+                new Vector2((VirtualWidth - textSize.X) / 2f, (VirtualHeight - textSize.Y) / 2f));
         }
-        private void DrawPlaying(SpriteBatch _spriteBatch)
+
+        private void DrawPlaying()
         {
-            GraphicsDevice.Clear(Color.Black);
             _players.ForEach(e => e.Draw(_spriteBatch));
-            //_ball.Draw(_spriteBatch);
+            _ball.Draw(_spriteBatch);
         }
-        
-        
+
+
+        private void DrawHUD()
+        {
+            _hud.DrawMenue(_spriteBatch, scoreP1, scoreP2, this);
+        }
         private void ResetGame()
         {
             GameStateManager.ChangeState(GameState.Playing);
+        }
+
+        private void OnClientSizeChanged(object sender, EventArgs e)
+        {
+            int w = Window.ClientBounds.Width;
+            int h = Window.ClientBounds.Height;
+
+            _graphics.PreferredBackBufferWidth = w;
+            _graphics.PreferredBackBufferHeight = h;
+            _graphics.ApplyChanges();
+
+            _players[0].PixelGeneric.Position = new Vector2(0, (h - _players[0].PixelGeneric.Height) / 2);
+
+            _players[1].PixelGeneric.Position = new Vector2(w - _players[1].PixelGeneric.Width, (h - _players[1].PixelGeneric.Height) / 2);
         }
     }
 }

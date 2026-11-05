@@ -38,7 +38,7 @@ namespace Class.Generic
 
         public void Draw(SpriteBatch spriteBatch, float rotation = 0f)
         {
-            Vector2 origin = new Vector2(Width / 2f, Height / 2f);
+            Vector2 origin = new Vector2(Width / 10f, Height / 10f);
             spriteBatch.Draw(
             Texture,
             Position,
@@ -46,7 +46,7 @@ namespace Class.Generic
             Tint,
             MathHelper.ToRadians(rotation),
             origin,
-            0.5f,
+            0.1f,
             SpriteEffects.None,
             0f
             );

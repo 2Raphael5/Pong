@@ -4,9 +4,15 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Futur-En-Tout-Genre/Pong/Pong/Content/Font/Font.spritefont</File>
+    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Font/Font.spritefont</File>
+    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Font/pixelart.ttf</File>
+    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Img/football.png</File>
+    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Img/hello_kitty.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
