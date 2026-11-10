@@ -7,6 +7,9 @@ namespace Class.Generic
 {
     public class PixelGeneric
     {
+        // Texture blanche de 1x1 pixel, étirée pour dessiner des rectangles pleins.
+        private static Texture2D _pixel;
+
         // Position du rectangle sur l'écran.
         public Vector2 Position;
 
@@ -43,11 +46,10 @@ namespace Class.Generic
             this.white = white;
         }
 
-        // Dessine un rectangle à la position définie.
+        // Dessine uniquement le contour du rectangle.
         // Le paramètre thickness permet de choisir l'épaisseur du contour.
         public void DrawRectangle(SpriteBatch spriteBatch, int thickness = 10)
         {
-            // Crée un rectangle à partir de sa position et de ses dimensions.
             Rectangle rect = new(
                 (int)Position.X,
                 (int)Position.Y,
@@ -55,13 +57,32 @@ namespace Class.Generic
                 Height
             );
 
-            // Dessine le rectangle avec sa couleur et l'épaisseur indiquées.
             PrimitiveRenderer.DrawRectangle(
                 spriteBatch,
                 rect,
                 Color,
                 thickness
             );
+        }
+
+        // Dessine le rectangle entièrement rempli avec sa couleur.
+        public void FillRectangle(SpriteBatch spriteBatch)
+        {
+            // Crée (ou recrée si nécessaire) la texture 1x1 blanche.
+            if (_pixel == null || _pixel.IsDisposed || _pixel.GraphicsDevice != spriteBatch.GraphicsDevice)
+            {
+                _pixel = new Texture2D(spriteBatch.GraphicsDevice, 1, 1);
+                _pixel.SetData(new[] { Color.White });
+            }
+
+            Rectangle rect = new(
+                (int)Position.X,
+                (int)Position.Y,
+                Width,
+                Height
+            );
+
+            spriteBatch.Draw(_pixel, rect, Color);
         }
     }
 }

@@ -52,7 +52,7 @@ namespace Pong.Class.Play
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            PixelGeneric.DrawRectangle(spriteBatch);
+            PixelGeneric.FillRectangle(spriteBatch);
         }
     }
 }

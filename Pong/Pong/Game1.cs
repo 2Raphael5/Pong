@@ -43,9 +43,6 @@ namespace Pong
         string scoreFont = "pixelart"; //Font du score
         string music = "arcade";
 
-
-
-
         #region Autre Variables
 
         Vector2 direction;
@@ -88,7 +85,7 @@ namespace Pong
         // Empêche plusieurs redimensionnements simultanés de la fenêtre.
         private bool _resizing;
 
-        // Initialise un générateur de nombres aléatoires.
+        // Générateur de nombres aléatoires.
         Random rnd;
 
         #endregion
@@ -96,10 +93,8 @@ namespace Pong
         // Constructeur : initialise les paramètres généraux du jeu.
         public Game1()
         {
-            //Initialise l'audio manager
-
-
             rnd = new Random();
+
             // Initialise le gestionnaire graphique.
             _graphics = new GraphicsDeviceManager(this);
 
@@ -154,11 +149,11 @@ namespace Pong
                 // Joueur 1 : placé à gauche de l'écran.
                 new Player(
                     new PixelGeneric(
-                        new Vector2(0, (VirtualHeight - 50) / 2),
+                        new Vector2(0, (VirtualHeight - player1Height) / 2),
                         player1Color
                     ),
                     player1Width,
-                    player1Height, 
+                    player1Height,
                     Vector2.Zero,
                     player1Speed
                 ),
@@ -166,11 +161,11 @@ namespace Pong
                 // Joueur 2 : placé à droite de l'écran.
                 new Player(
                     new PixelGeneric(
-                        new Vector2(VirtualWidth - 10, (VirtualHeight - 50) / 2),
+                        new Vector2(VirtualWidth - player2Width, (VirtualHeight - player2Height) / 2),
                         player2Color
                     ),
                     player2Width,
-                    player2Height, 
+                    player2Height,
                     Vector2.Zero,
                     player2Speed
                 ),
@@ -182,22 +177,17 @@ namespace Pong
             // Crée la balle avec son image et sa direction de déplacement.
             _ball = new Ball(new SpriteGeneric(ballTexture), direction);
 
-            // Place la balle au centre de la fenêtre.
-            _ball.SpriteGeneric.Position = new Vector2(
-                Window.ClientBounds.Width / 2,
-                Window.ClientBounds.Height / 2
-            );
-            // Initialise l'interface des scores avec la police pixel art.
-            _hud = new Hud(_scoreFont);
-
-            // Initialise le système permettant de dessiner des formes simples.
-            PrimitiveRenderer.Initialize(GraphicsDevice);
-
             // Positionne la balle au centre de la résolution virtuelle.
             _ball.SpriteGeneric.Position = new Vector2(
                 VirtualWidth / 2,
                 VirtualHeight / 2
             );
+
+            // Initialise l'interface des scores avec la police pixel art.
+            _hud = new Hud(_scoreFont);
+
+            // Initialise le système permettant de dessiner des formes simples.
+            PrimitiveRenderer.Initialize(GraphicsDevice);
 
             base.Initialize();
         }
@@ -218,6 +208,9 @@ namespace Pong
         // Méthode exécutée régulièrement pour mettre à jour le jeu.
         protected override void Update(GameTime gameTime)
         {
+            // Actualise les entrées EN PREMIER pour éviter un frame de retard.
+            _input.Update(gameTime);
+
             // Ferme le jeu si le joueur appuie sur Échap
             // ou sur le bouton Retour de la manette.
             if (
@@ -226,9 +219,9 @@ namespace Pong
             )
                 Exit();
 
-            // Calcule le temps écoulé depuis la dernière mise à jour.
-            // Permet de gérer les déplacements indépendamment des FPS.
-            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            // Temps écoulé depuis la dernière mise à jour (indépendant des FPS).
+            // Plafonné pour éviter un énorme saut après un freeze ou un redimensionnement.
+            float deltaTime = Math.Min((float)gameTime.ElapsedGameTime.TotalSeconds, 1f / 30f);
 
             // Appelle la mise à jour correspondant à l'écran actuel.
             switch (GameStateManager.CurrentState)
@@ -245,9 +238,6 @@ namespace Pong
                     UpdatePause();
                     break;
             }
-
-            // Actualise les entrées du clavier et de la manette.
-            _input.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -286,8 +276,6 @@ namespace Pong
             // Met à jour chaque joueur de la liste.
             for (int i = 0; i < _players.Count; i++)
             {
-                // Transmet les commandes, le temps écoulé,
-                // le numéro du joueur et les informations du jeu.
                 _players[i].Update(deltaTime, _input, i, this);
             }
 
@@ -308,20 +296,17 @@ namespace Pong
             int w = GraphicsDevice.PresentationParameters.BackBufferWidth;
             int h = GraphicsDevice.PresentationParameters.BackBufferHeight;
 
-            // Remplit toute la fenêtre avec un fond noir.
-            // Cela permet de créer des bandes noires si les proportions
-            // de la fenêtre ne correspondent pas à celles du jeu.
+            // Remplit toute la fenêtre avec un fond noir (bandes noires si les proportions diffèrent).
             GraphicsDevice.Viewport = new Viewport(0, 0, w, h);
             GraphicsDevice.Clear(backgrounColor);
 
-            // Calcule une échelle qui permet d'adapter le jeu à la fenêtre
-            // sans déformer les éléments.
+            // Échelle qui adapte le jeu à la fenêtre sans déformation.
             float scale = Math.Min(
                 w / (float)VirtualWidth,
                 h / (float)VirtualHeight
             );
 
-            // Calcule la taille de la zone de jeu après mise à l'échelle.
+            // Taille de la zone de jeu après mise à l'échelle.
             int vw = (int)(VirtualWidth * scale);
             int vh = (int)(VirtualHeight * scale);
 
@@ -346,15 +331,11 @@ namespace Pong
                     break;
 
                 case GameState.Playing:
-                    // Affiche les joueurs et la balle.
                     DrawPlaying();
-
-                    // Affiche les scores.
                     DrawHUD();
                     break;
             }
 
-            // Termine le dessin des éléments à l'écran.
             _spriteBatch.End();
 
             base.Draw(gameTime);
@@ -366,7 +347,6 @@ namespace Pong
             // Récupère les dimensions du texte pour pouvoir le centrer.
             Vector2 textSize = _font.MeasureString("Play");
 
-            // Dessine le menu avec la police et la position souhaitées.
             _mainMenu.Draw(
                 _spriteBatch,
                 _font,
@@ -380,10 +360,7 @@ namespace Pong
         // Dessine les éléments présents pendant une partie.
         private void DrawPlaying()
         {
-            // Dessine tous les joueurs.
             _players.ForEach(e => e.Draw(_spriteBatch));
-
-            // Dessine la balle.
             _ball.Draw(_spriteBatch);
         }
 
@@ -393,19 +370,13 @@ namespace Pong
             _hud.DrawMenue(_spriteBatch, scoreP1, scoreP2, this);
         }
 
-        // Lance une partie en changeant l'état actuel du jeu.
+        // Lance une manche : passe en mode jeu et donne une direction aléatoire à la balle.
         public void ResetGame()
         {
             GameStateManager.ChangeState(GameState.Playing);
 
-            // Génère une direction aléatoire pour le premier déplacement de la balle.
-            direction = new Vector2(
-                rnd.Next(-500, 500),
-                rnd.Next(-500, 500)
-            );
-
-            // Génère une nouvelle direction si la balle risque
-            // de se déplacer presque uniquement horizontalement ou verticalement.
+            // Génère une direction aléatoire, en évitant les trajectoires
+            // presque purement horizontales ou verticales.
             do
             {
                 direction = new Vector2(
@@ -417,36 +388,9 @@ namespace Pong
                 (direction.X > -250 && direction.X < 250) ||
                 (direction.Y > -250 && direction.Y < 250)
             );
+
             _ball.OriginalVelocity = direction;
             _ball.Velocity = direction;
-
-        }
-
-        // Repositionne les joueurs lorsque la fenêtre change de taille.
-        private void OnClientSizeChanged(object sender, EventArgs e)
-        {
-            // Récupère les nouvelles dimensions de la fenêtre.
-            int w = Window.ClientBounds.Width;
-            int h = Window.ClientBounds.Height;
-
-            // Applique les nouvelles dimensions à l'affichage.
-            _graphics.PreferredBackBufferWidth = w;
-            _graphics.PreferredBackBufferHeight = h;
-            _graphics.ApplyChanges();
-
-            // Replace le joueur 1 au bord gauche de l'écran.
-            // Il reste centré verticalement.
-            _players[0].PixelGeneric.Position = new Vector2(
-                0,
-                (h - _players[0].PixelGeneric.Height) / 2
-            );
-
-            // Replace le joueur 2 au bord droit de l'écran.
-            // Il reste également centré verticalement.
-            _players[1].PixelGeneric.Position = new Vector2(
-                w - _players[1].PixelGeneric.Width,
-                (h - _players[1].PixelGeneric.Height) / 2
-            );
         }
     }
 }

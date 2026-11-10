@@ -23,7 +23,7 @@ namespace Class
             { InputAction.P2Down, Keys.Down },
 
             { InputAction.Pause, Keys.P },
-            { InputAction.Confirm, Keys.Enter },
+            { InputAction.Confirm, Keys.Space },
             { InputAction.Restart, Keys.R },
             { InputAction.Debug, Keys.F1 },
             { InputAction.Exit, Keys.Escape},
