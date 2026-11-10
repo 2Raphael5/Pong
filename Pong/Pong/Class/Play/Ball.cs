@@ -65,11 +65,13 @@ namespace Pong.Class.Play
             {
                 game.scoreP2++;
                 ResetBall(screenW, screenH);
+                game.ResetGame();
             }
             else if (SpriteGeneric.Position.X > screenW)
             {
                 game.scoreP1++;
                 ResetBall(screenW, screenH);
+                game.ResetGame();
             }
         }
 

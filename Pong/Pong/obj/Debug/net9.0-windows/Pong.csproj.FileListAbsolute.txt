@@ -55,3 +55,5 @@ C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Debug\n
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Img\hello_kitty.xnb
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Img\football.xnb
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Font\pixelart.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Music\arcade.wma
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Music\arcade.xnb

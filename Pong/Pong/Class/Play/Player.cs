@@ -17,17 +17,18 @@ namespace Pong.Class.Play
         public PixelGeneric PixelGeneric { get; set; }
         public Vector2 Velocity { get; set; }
 
-        public Player(PixelGeneric pixelGeneric, int width, int height, Vector2 velocity)
+        public float Speed {  get; set; }
+        public Player(PixelGeneric pixelGeneric, int width, int height, Vector2 velocity, float speed)
         {
             PixelGeneric = pixelGeneric;
             PixelGeneric.Width = width;
             PixelGeneric.Height = height;
             Velocity = velocity;
+            Speed = speed;
         }
 
         public void Update(float deltaTime, InputManager _input, int playerID, Game1 game)
         {
-            float speed = 800f;
             float dir = 0;
 
             if (playerID == 0)
@@ -41,7 +42,7 @@ namespace Pong.Class.Play
                 if (_input.IsDown(InputAction.P2Down)) dir += 1;
             }
 
-            Velocity = new Vector2(0, dir * speed);
+            Velocity = new Vector2(0, dir * Speed);
             PixelGeneric.Position += Velocity * deltaTime;
 
             float maxY = Game1.VirtualHeight - PixelGeneric.Height;

@@ -291,3 +291,5 @@ C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Release
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Release\net9.0-windows\win-x64\Pong.pdb
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Release\net9.0-windows\win-x64\Pong.genruntimeconfig.cache
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Release\net9.0-windows\win-x64\ref\Pong.dll
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\Music\arcade.wma
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\Music\arcade.xnb
