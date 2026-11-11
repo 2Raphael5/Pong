@@ -92,3 +92,9 @@ C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\Pong\Pong\Pong\obj\Debug\net9.0-wi
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\Pong\Pong\Pong\obj\Debug\net9.0-windows\Pong.genruntimeconfig.cache
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\Pong\Pong\Pong\obj\Debug\net9.0-windows\ref\Pong.dll
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\FontScore.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\hiphop.wma
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\hiphop.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\HereToStay.wma
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\HereToStay.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Treachery.wma
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Treachery.xnb

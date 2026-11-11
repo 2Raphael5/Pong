@@ -18,14 +18,14 @@ namespace Class
         {
             Font = font;
         }
-        public void DrawMenue(SpriteBatch spriteBatch, int scoreP1, int scoreP2, Game game)
+        public void DrawMenue(SpriteBatch spriteBatch, int scoreP1, int scoreP2, Game game, Color fontColor)
         {
 
 
             Vector2 textSize = Font.MeasureString($"{scoreP2}");
-            spriteBatch.DrawString(Font, $"{scoreP1}", new Vector2(game.Window.ClientBounds.Width/4, game.Window.ClientBounds.Height / 10), Color.White);
+            spriteBatch.DrawString(Font, $"{scoreP1}", new Vector2(game.Window.ClientBounds.Width/4, game.Window.ClientBounds.Height / 10), fontColor);
 
-            spriteBatch.DrawString(Font, $"{scoreP2}", new Vector2(game.Window.ClientBounds.Width- textSize.X - game.Window.ClientBounds.Width / 4, game.Window.ClientBounds.Height / 10), Color.White);            
+            spriteBatch.DrawString(Font, $"{scoreP2}", new Vector2(game.Window.ClientBounds.Width- textSize.X - game.Window.ClientBounds.Width / 4, game.Window.ClientBounds.Height / 10), fontColor);            
         }
 
         public void DrawTerrain(SpriteBatch spriteBatch, Game game, Color lineColor, int terrainThickness= 1, int lineThickness = 1, int nbPoint = 10)

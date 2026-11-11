@@ -75,6 +75,20 @@
 /processorParam:Version=3.8.5.1
 /build:football.png
 
+#begin HereToStay.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/processorParam:Version=3.8.5.1
+/build:HereToStay.mp3
+
+#begin hiphop.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/processorParam:Version=3.8.5.1
+/build:hiphop.mp3
+
 #begin pixelart.ttf
 /importer:FontImporter
 /processor:FontDescriptionProcessor
@@ -82,4 +96,11 @@
 /processorParam:TextureFormat=Compressed
 /processorParam:Version=3.8.5.1
 /build:pixelart.ttf
+
+#begin Treachery.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/processorParam:Version=3.8.5.1
+/build:Treachery.mp3
 

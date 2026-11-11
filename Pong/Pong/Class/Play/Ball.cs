@@ -22,6 +22,16 @@ namespace Pong.Class.Play
         // Doit rester inférieure à la largeur d'une raquette pour éviter le tunneling.
         private const float MaxStep = 4f;
 
+        // Part de la vitesse de la raquette transmise à la balle (0 = aucun effet, 1 = totalité).
+        private const float PaddleInfluence = 0.5f;
+
+        // Pente maximale de la balle après un rebond (|Vy| / |Vx|). 2 ≈ 63° max.
+        private const float MaxSlope = 2f;
+
+        // Mémorisation de la position et de la vitesse verticale de chaque raquette.
+        private readonly Dictionary<Player, float> _lastPaddleY = new Dictionary<Player, float>();
+        private readonly Dictionary<Player, float> _paddleVelY = new Dictionary<Player, float>();
+
         public SpriteGeneric SpriteGeneric { get; set; }
         public Vector2 Velocity { get; set; }
         public Vector2 OriginalVelocity { get; set; }
@@ -41,6 +51,9 @@ namespace Pong.Class.Play
 
             float ballW = SpriteGeneric.Width * BallScale;
             float ballH = SpriteGeneric.Height * BallScale;
+
+            // Mesure la vitesse verticale de chaque raquette sur cette frame.
+            UpdatePaddleSpeeds(players, deltaTime);
 
             // Découpe le déplacement en petits pas pour ne jamais "sauter" une raquette.
             int steps = Math.Max(1, (int)Math.Ceiling(Velocity.Length() * deltaTime / MaxStep));
@@ -68,6 +81,25 @@ namespace Pong.Class.Play
                     game.ResetGame();
                     return;
                 }
+            }
+        }
+
+        // Calcule la vitesse verticale (px/s) de chaque raquette sur cette frame.
+        private void UpdatePaddleSpeeds(List<Player> players, float deltaTime)
+        {
+            if (deltaTime <= 0f)
+                return;
+
+            foreach (Player player in players)
+            {
+                float y = player.PixelGeneric.Position.Y;
+
+                if (_lastPaddleY.TryGetValue(player, out float lastY))
+                    _paddleVelY[player] = (y - lastY) / deltaTime;
+                else
+                    _paddleVelY[player] = 0f;
+
+                _lastPaddleY[player] = y;
             }
         }
 
@@ -112,23 +144,42 @@ namespace Pong.Class.Play
 
                 bool leftPaddle = player.PixelGeneric.Position.X < screenW / 2f;
 
+                _paddleVelY.TryGetValue(player, out float paddleVy);
+
                 // On ne rebondit que si la balle va vers la raquette :
                 // évite les rebonds multiples et les accélérations répétées.
                 if (leftPaddle && Velocity.X < 0)
                 {
-                    Velocity = new Vector2(Math.Abs(Velocity.X), Velocity.Y);
+                    Velocity = Deflect(+1f, paddleVy);
                     SpriteGeneric.Position = new Vector2(playerRect.Right, SpriteGeneric.Position.Y);
                     ApplyBoost();
                     break;
                 }
                 else if (!leftPaddle && Velocity.X > 0)
                 {
-                    Velocity = new Vector2(-Math.Abs(Velocity.X), Velocity.Y);
+                    Velocity = Deflect(-1f, paddleVy);
                     SpriteGeneric.Position = new Vector2(playerRect.Left - ballW, SpriteGeneric.Position.Y);
                     ApplyBoost();
                     break;
                 }
             }
+        }
+
+        // Renvoie la balle vers dirX (+1 ou -1) en la déviant selon le mouvement de la raquette.
+        private Vector2 Deflect(float dirX, float paddleVelY)
+        {
+            float speed = Velocity.Length();
+
+            float vx = Math.Abs(Velocity.X);
+            float vy = Velocity.Y + paddleVelY * PaddleInfluence;
+
+            // Empêche un angle trop vertical (la balle resterait presque coincée en haut/bas).
+            float maxVy = vx * MaxSlope;
+            vy = MathHelper.Clamp(vy, -maxVy, maxVy);
+
+            // On garde la même vitesse globale : seul l'angle change.
+            Vector2 result = new Vector2(dirX * vx, vy);
+            return Vector2.Normalize(result) * speed;
         }
 
         // Accélère la balle en respectant la vitesse maximale.

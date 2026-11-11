@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/hiphop.mp3</SourceFile>
+  <SourceTime>2026-11-11T15:26:36.9239304+01:00</SourceTime>
+  <DestFile>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/bin/Windows/Content/hiphop.xnb</DestFile>
+  <DestTime>2026-11-11T15:30:06.0127216+01:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2026-08-14T23:50:10+02:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2026-08-14T23:50:10+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Parameters>
+    <Key>Version</Key>
+    <Value>3.8.5.1</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/bin/Windows/Content/hiphop.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>
