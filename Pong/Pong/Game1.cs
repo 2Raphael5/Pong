@@ -1,4 +1,5 @@
-﻿using Class;
+﻿
+using Class;
 using Class.DebugTools;
 using Class.Generic;
 using Class.Menu;
@@ -16,9 +17,9 @@ using Keys = Microsoft.Xna.Framework.Input.Keys;
 // Définit les différents écrans du jeu.
 public enum GameState
 {
-    Playing, // Partie en cours.
-    Pause,   // Partie en pause.
-    Menu     // Menu principal.
+    Playing,
+    Pause,
+    Menu
 }
 
 namespace Pong
@@ -28,140 +29,111 @@ namespace Pong
         private AudioManager _audio;
         private Song _gameplayMusic;
 
-        float player1Speed = 2000f; //La vitesse du joueur 1
-        float player2Speed = 2000f; //La vitesse du joueur 2
+        float player1Speed = 2000f;
+        float player2Speed = 2000f;
 
-        int player1Width = 20; //La largeur du joueur 1
-        int player2Width = 10; //La largeur du joueur 2
+        int player1Width = 20;
+        int player2Width = 10;
 
-        int player1Height = 300; //La hauteur du joueur 1
-        int player2Height = 300; //La hauteur du joueur 2
+        int player1Height = 300;
+        int player2Height = 300;
 
-        float ballSize = 0.1f; // Taille de la balle
+        float ballSize = 0.1f;
 
-        Color backgroundColor = Color.Black; //Couleur de font
+        Color backgroundColor = Color.Black;
 
-        Color player1Color = Color.Blue; //Couleur du joueur à gauche
-        Color player2Color = Color.Green; //Couleur du jouer à droite
+        Color player1Color = Color.Blue;
+        Color player2Color = Color.Green;
 
+        // Ressources du jeu.
+        string ballImg = "bille";
+        string music = "arcade";
 
-        //Importer
-        string ballImg = "bille"; //Image du ballon
-        string music = "arcade"; //Musique de font
+        string menuFont = "Font";
+        string scoreFont = "pixelart";
 
-
-        string menuFont = "Font"; //Font du menu
-        string scoreFont = "pixelart"; //Font du score
-
-
-
-        #region Autre Variables
+        #region Autres Variables
 
         Vector2 direction;
 
-        // Gestion des entrées du joueur (clavier et manette).
         private InputManager _input;
-
-        // Gestion du menu principal.
         private MainMenu _mainMenu;
-
-        // Gestion de l'affichage des scores.
         private Hud _hud;
 
-        // Gestion des paramètres graphiques du jeu.
         private GraphicsDeviceManager _graphics;
-
-        // Permet de dessiner les éléments à l'écran.
         private SpriteBatch _spriteBatch;
 
-        // Polices utilisées pour afficher les textes.
         SpriteFont _font;
         SpriteFont _scoreFont;
 
-        // Liste contenant les deux joueurs.
         List<Player> _players;
-
-        // Balle utilisée pendant la partie.
         Ball _ball;
 
-        // Scores des deux joueurs.
         public int scoreP1;
         public int scoreP2;
 
-        // Dimensions de référence du jeu.
-        // Elles permettent de conserver les proportions du jeu
-        // même lorsque la fenêtre est redimensionnée.
+        // Résolution virtuelle du jeu.
         public const int VirtualWidth = 1920;
         public const int VirtualHeight = 1080;
 
-        // Empêche plusieurs redimensionnements simultanés de la fenêtre.
-        private bool _resizing;
-
-        // Générateur de nombres aléatoires.
         Random rnd;
 
         #endregion
 
-        // Constructeur : initialise les paramètres généraux du jeu.
+        // Constructeur.
         public Game1()
         {
             rnd = new Random();
 
-            // Initialise le gestionnaire graphique.
             _graphics = new GraphicsDeviceManager(this);
 
-            // Définit le dossier contenant les ressources du jeu.
             Content.RootDirectory = "Content";
 
-            // Autorise le redimensionnement de la fenêtre.
-            Window.AllowUserResizing = true;
+            // Active le plein écran.
+            _graphics.IsFullScreen = true;
 
-            // Définit la résolution de départ.
-            _graphics.PreferredBackBufferWidth = VirtualWidth;
-            _graphics.PreferredBackBufferHeight = VirtualHeight;
+            // Utilise la résolution native de l'écran.
+            _graphics.PreferredBackBufferWidth =
+                GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
 
-            // Détecte les changements de taille de la fenêtre.
-            Window.ClientSizeChanged += (s, e) =>
-            {
-                // Évite de relancer un redimensionnement déjà en cours.
-                if (_resizing) return;
+            _graphics.PreferredBackBufferHeight =
+                GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
 
-                _resizing = true;
+            // Synchronisation verticale.
+            _graphics.SynchronizeWithVerticalRetrace = true;
 
-                // Adapte la résolution à la nouvelle taille de la fenêtre.
-                _graphics.PreferredBackBufferWidth = Window.ClientBounds.Width;
-                _graphics.PreferredBackBufferHeight = Window.ClientBounds.Height;
+            // Applique les paramètres graphiques.
+            _graphics.ApplyChanges();
 
-                // Applique les nouvelles dimensions.
-                _graphics.ApplyChanges();
-
-                _resizing = false;
-            };
+            // Désactive le redimensionnement manuel.
+            Window.AllowUserResizing = false;
         }
 
-        // Initialise les éléments nécessaires au fonctionnement du jeu.
+        // Initialisation du jeu.
         protected override void Initialize()
         {
-            // Charge les polices utilisées pour les différents textes.
-            _font = Content.Load<SpriteFont>($"{menuFont}");
-            _scoreFont = Content.Load<SpriteFont>($"{scoreFont}");
+            // Chargement des polices.
+            _font = Content.Load<SpriteFont>(menuFont);
+            _scoreFont = Content.Load<SpriteFont>(scoreFont);
 
-            // Affiche le menu principal au lancement.
+            // Affiche le menu principal.
             GameStateManager.ChangeState(GameState.Menu);
 
-            // Initialise la gestion des commandes du joueur.
+            // Gestion des entrées.
             _input = new InputManager();
 
-            // Crée le menu principal.
+            // Création du menu.
             _mainMenu = new MainMenu();
 
-            // Crée les deux joueurs et définit leur position de départ.
+            // Création des joueurs.
             _players = new List<Player>
             {
-                // Joueur 1 : placé à gauche de l'écran.
                 new Player(
                     new PixelGeneric(
-                        new Vector2(0, (VirtualHeight - player1Height) / 2),
+                        new Vector2(
+                            0,
+                            (VirtualHeight - player1Height) / 2
+                        ),
                         player1Color
                     ),
                     player1Width,
@@ -170,72 +142,82 @@ namespace Pong
                     player1Speed
                 ),
 
-                // Joueur 2 : placé à droite de l'écran.
                 new Player(
                     new PixelGeneric(
-                        new Vector2(VirtualWidth - player2Width, (VirtualHeight - player2Height) / 2),
+                        new Vector2(
+                            VirtualWidth - player2Width,
+                            (VirtualHeight - player2Height) / 2
+                        ),
                         player2Color
                     ),
                     player2Width,
                     player2Height,
                     Vector2.Zero,
                     player2Speed
-                ),
+                )
             };
 
-            // Charge l'image utilisée pour représenter la balle.
-            Texture2D ballTexture = Content.Load<Texture2D>($"{ballImg}");
+            // Chargement de la texture de la balle.
+            Texture2D ballTexture =
+                Content.Load<Texture2D>(ballImg);
 
-            // Crée la balle avec son image et sa direction de déplacement.
-            _ball = new Ball(new SpriteGeneric(ballTexture), direction, ballSize);
+            // Création de la balle.
+            _ball = new Ball(
+                new SpriteGeneric(ballTexture),
+                direction,
+                ballSize
+            );
 
-            // Positionne la balle au centre de la résolution virtuelle.
+            // Position initiale de la balle.
             _ball.SpriteGeneric.Position = new Vector2(
                 VirtualWidth / 2,
                 VirtualHeight / 2
             );
 
-            // Initialise l'interface des scores avec la police pixel art.
+            // Initialisation du HUD.
             _hud = new Hud(_scoreFont);
 
-            // Initialise le système permettant de dessiner des formes simples.
+            // Initialisation du rendu des formes.
             PrimitiveRenderer.Initialize(GraphicsDevice);
 
             base.Initialize();
         }
 
-        // Charge les ressources graphiques nécessaires à l'affichage.
+        // Chargement des ressources.
         protected override void LoadContent()
         {
-            // Initialise le SpriteBatch, utilisé pour dessiner les images et les textes.
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            _gameplayMusic = Content.Load<Song>($"{music}");
+            _gameplayMusic = Content.Load<Song>(music);
 
             _audio = new AudioManager();
+
             _audio.SetMusicVolume(10f);
             _audio.PlayMusic(_gameplayMusic, true);
         }
 
-        // Méthode exécutée régulièrement pour mettre à jour le jeu.
+        // Mise à jour du jeu.
         protected override void Update(GameTime gameTime)
         {
-            // Actualise les entrées EN PREMIER pour éviter un frame de retard.
+            // Actualisation des entrées.
             _input.Update(gameTime);
 
-            // Ferme le jeu si le joueur appuie sur Échap
-            // ou sur le bouton Retour de la manette.
+            // Fermeture avec Échap ou le bouton retour.
             if (
-                GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-                Keyboard.GetState().IsKeyDown(Keys.Escape)
+                Keyboard.GetState().IsKeyDown(Keys.Escape) ||
+                GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed
             )
+            {
                 Exit();
+            }
 
-            // Temps écoulé depuis la dernière mise à jour (indépendant des FPS).
-            // Plafonné pour éviter un énorme saut après un freeze ou un redimensionnement.
-            float deltaTime = Math.Min((float)gameTime.ElapsedGameTime.TotalSeconds, 1f / 30f);
+            // Calcul du temps écoulé.
+            float deltaTime = Math.Min(
+                (float)gameTime.ElapsedGameTime.TotalSeconds,
+                1f / 30f
+            );
 
-            // Appelle la mise à jour correspondant à l'écran actuel.
+            // Mise à jour selon l'écran actuel.
             switch (GameStateManager.CurrentState)
             {
                 case GameState.Menu:
@@ -254,88 +236,108 @@ namespace Pong
             base.Update(gameTime);
         }
 
-        // Gère les interactions avec le menu principal.
+        // Mise à jour du menu principal.
         private void UpdateMainMenu()
         {
-            // Ferme l'application si le joueur utilise la commande Exit.
             if (_input.IsJustPressed(InputAction.Exit))
             {
-                Application.Exit();
+                Exit();
             }
 
-            // Met à jour le menu en fonction des commandes du joueur.
             _mainMenu.Update(_input);
 
-            // Vérifie si le joueur a confirmé son choix.
             if (_mainMenu.IsConfirmed(_input))
             {
-                // Si le premier élément est sélectionné, démarre une partie.
                 if (_mainMenu.SelectedIndex == 0)
                 {
                     ResetGame();
                 }
                 else
                 {
-                    // Sinon, quitte le jeu.
                     Exit();
                 }
             }
         }
 
-        // Gère les déplacements des joueurs et de la balle pendant la partie.
+        // Mise à jour de la partie.
         private void UpdatePlaying(float deltaTime)
         {
-            // Met à jour chaque joueur de la liste.
             for (int i = 0; i < _players.Count; i++)
             {
-                _players[i].Update(deltaTime, _input, i, this);
+                _players[i].Update(
+                    deltaTime,
+                    _input,
+                    i,
+                    this
+                );
             }
 
-            // Met à jour la balle et gère ses interactions avec les joueurs.
-            _ball.Update(deltaTime, this, _players);
+            _ball.Update(
+                deltaTime,
+                this,
+                _players
+            );
         }
 
-        // Gère les mises à jour lorsque la partie est en pause.
+        // Mise à jour de la pause.
         private void UpdatePause()
         {
-
         }
 
-        // Dessine les éléments visibles à l'écran.
+        // Affichage du jeu.
         protected override void Draw(GameTime gameTime)
         {
-            // Récupère la largeur et la hauteur réelles de la fenêtre.
-            int w = GraphicsDevice.PresentationParameters.BackBufferWidth;
-            int h = GraphicsDevice.PresentationParameters.BackBufferHeight;
+            // Récupération de la résolution réelle.
+            int screenWidth =
+                GraphicsDevice.PresentationParameters.BackBufferWidth;
 
-            // Remplit toute la fenêtre avec un fond noir (bandes noires si les proportions diffèrent).
-            GraphicsDevice.Viewport = new Viewport(0, 0, w, h);
+            int screenHeight =
+                GraphicsDevice.PresentationParameters.BackBufferHeight;
+
+            // Nettoyage de l'écran.
+            GraphicsDevice.Viewport = new Viewport(
+                0,
+                0,
+                screenWidth,
+                screenHeight
+            );
+
             GraphicsDevice.Clear(backgroundColor);
 
-            // Échelle qui adapte le jeu à la fenêtre sans déformation.
+            // Calcul de l'échelle pour conserver les proportions.
             float scale = Math.Min(
-                w / (float)VirtualWidth,
-                h / (float)VirtualHeight
+                screenWidth / (float)VirtualWidth,
+                screenHeight / (float)VirtualHeight
             );
 
-            // Taille de la zone de jeu après mise à l'échelle.
-            int vw = (int)(VirtualWidth * scale);
-            int vh = (int)(VirtualHeight * scale);
+            // Dimensions de la zone de jeu.
+            int virtualWidth = (int)(VirtualWidth * scale);
+            int virtualHeight = (int)(VirtualHeight * scale);
 
-            // Centre la zone de jeu dans la fenêtre.
+            // Centrage de la zone de jeu.
+            int offsetX = (screenWidth - virtualWidth) / 2;
+            int offsetY = (screenHeight - virtualHeight) / 2;
+
+            // Définition du Viewport.
             GraphicsDevice.Viewport = new Viewport(
-                (w - vw) / 2,
-                (h - vh) / 2,
-                vw,
-                vh
+                offsetX,
+                offsetY,
+                virtualWidth,
+                virtualHeight
             );
 
-            // Prépare le dessin en appliquant l'échelle calculée.
+            // Transformation graphique.
+            Matrix scaleMatrix = Matrix.CreateScale(
+                scale,
+                scale,
+                1f
+            );
+
             _spriteBatch.Begin(
-                transformMatrix: Matrix.CreateScale(scale, scale, 1f)
+                transformMatrix: scaleMatrix
             );
 
-            // Dessine les éléments correspondant à l'écran actuel.
+            // Affichage selon l'état du jeu.
             switch (GameStateManager.CurrentState)
             {
                 case GameState.Menu:
@@ -346,6 +348,9 @@ namespace Pong
                     DrawPlaying();
                     DrawHUD();
                     break;
+
+                case GameState.Pause:
+                    break;
             }
 
             _spriteBatch.End();
@@ -353,10 +358,9 @@ namespace Pong
             base.Draw(gameTime);
         }
 
-        // Affiche le menu principal au centre de l'écran.
+        // Affichage du menu.
         private void DrawMenu()
         {
-            // Récupère les dimensions du texte pour pouvoir le centrer.
             Vector2 textSize = _font.MeasureString("Play");
 
             _mainMenu.Draw(
@@ -369,26 +373,33 @@ namespace Pong
             );
         }
 
-        // Dessine les éléments présents pendant une partie.
+        // Affichage des joueurs et de la balle.
         private void DrawPlaying()
         {
-            _players.ForEach(e => e.Draw(_spriteBatch));
+            _players.ForEach(player =>
+                player.Draw(_spriteBatch)
+            );
+
             _ball.Draw(_spriteBatch);
         }
 
-        // Affiche l'interface de jeu et les scores des joueurs.
+        // Affichage des scores.
         private void DrawHUD()
         {
-            _hud.DrawMenue(_spriteBatch, scoreP1, scoreP2, this);
+            _hud.DrawMenue(
+                _spriteBatch,
+                scoreP1,
+                scoreP2,
+                this
+            );
         }
 
-        // Lance une manche : passe en mode jeu et donne une direction aléatoire à la balle.
+        // Réinitialisation et lancement d'une partie.
         public void ResetGame()
         {
             GameStateManager.ChangeState(GameState.Playing);
 
-            // Génère une direction aléatoire, en évitant les trajectoires
-            // presque purement horizontales ou verticales.
+            // Génération d'une direction aléatoire.
             do
             {
                 direction = new Vector2(
@@ -401,6 +412,7 @@ namespace Pong
                 (direction.Y > -250 && direction.Y < 250)
             );
 
+            // Application de la direction à la balle.
             _ball.OriginalVelocity = direction;
             _ball.Velocity = direction;
         }
