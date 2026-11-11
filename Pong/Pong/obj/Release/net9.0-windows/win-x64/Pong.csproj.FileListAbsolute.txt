@@ -1,7 +1,3 @@
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\Font\Font.xnb
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\Font\pixelart.xnb
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\Img\football.xnb
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\Img\hello_kitty.xnb
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Pong.exe
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Pong.deps.json
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Pong.runtimeconfig.json
@@ -291,5 +287,10 @@ C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Release
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Release\net9.0-windows\win-x64\Pong.pdb
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Release\net9.0-windows\win-x64\Pong.genruntimeconfig.cache
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Release\net9.0-windows\win-x64\ref\Pong.dll
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\Music\arcade.wma
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\Music\arcade.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\arcade.wma
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\arcade.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\bille.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\Font.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\football.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\pixelart.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Release\net9.0-windows\win-x64\Content\balle.xnb

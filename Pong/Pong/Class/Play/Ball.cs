@@ -10,7 +10,7 @@ namespace Pong.Class.Play
     {
         // Échelle utilisée pour la hitbox de la balle.
         // IMPORTANT : doit correspondre à la taille réellement dessinée par SpriteGeneric.Draw.
-        private const float BallScale = 0.1f;
+        public float BallScale;
 
         // Multiplicateur de vitesse à chaque rebond.
         private const float SpeedBoost = 1.05f;
@@ -26,11 +26,12 @@ namespace Pong.Class.Play
         public Vector2 Velocity { get; set; }
         public Vector2 OriginalVelocity { get; set; }
 
-        public Ball(SpriteGeneric spriteGeneric, Vector2 velocity)
+        public Ball(SpriteGeneric spriteGeneric, Vector2 velocity, float scale)
         {
             SpriteGeneric = spriteGeneric;
             OriginalVelocity = velocity;
             Velocity = velocity;
+            BallScale = scale;
         }
 
         public void Update(float deltaTime, Game1 game, List<Player> players)
@@ -149,7 +150,7 @@ namespace Pong.Class.Play
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            SpriteGeneric.Draw(spriteBatch);
+            SpriteGeneric.Draw(spriteBatch, BallScale);
         }
     }
 }

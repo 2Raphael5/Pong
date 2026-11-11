@@ -82,7 +82,7 @@ namespace Class.Generic
 
         // Dessine l'objet à l'écran.
         // Le paramètre rotation permet de définir son angle de rotation.
-        public void Draw(SpriteBatch spriteBatch, float rotation = 0f)
+        public void Draw(SpriteBatch spriteBatch, float size, float rotation = 0f)
         {
             // Définit le point autour duquel l'image va être dessinée et tournée.
             Vector2 origin = new Vector2(Width / 10f, Height / 10f);
@@ -95,7 +95,7 @@ namespace Class.Generic
                 Tint,                            // Couleur de l'image.
                 MathHelper.ToRadians(rotation),  // Angle de rotation en radians.
                 origin,                          // Point de rotation.
-                0.1f,                            // Taille de l'image (échelle).
+                size,                            // Taille de l'image (échelle).
                 SpriteEffects.None,              // Aucun effet miroir.
                 0f                               // Profondeur d'affichage.
             );

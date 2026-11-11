@@ -7,7 +7,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Pong.Class.Play;
-using Simulation_etre_vivant.Class.Input;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -29,19 +28,32 @@ namespace Pong
         private AudioManager _audio;
         private Song _gameplayMusic;
 
-        float player1Speed = 800f; //La vitesse du joueur 1
-        float player2Speed = 800f; //La vitesse du joueur 2
-        int player1Width = 10; //La largeur du joueur 1
+        float player1Speed = 2000f; //La vitesse du joueur 1
+        float player2Speed = 2000f; //La vitesse du joueur 2
+
+        int player1Width = 20; //La largeur du joueur 1
         int player2Width = 10; //La largeur du joueur 2
-        int player1Height = 200; //La hauteur du joueur 1
-        int player2Height = 200; //La hauteur du joueur 2
-        Color backgrounColor = Color.Black; //Couleur de font
-        Color player1Color = Color.Red; //Couleur du joueur à gauche
-        Color player2Color = Color.Blue; //Couleur du jouer à droite
-        string ballImg = "football"; //Image du ballon
+
+        int player1Height = 300; //La hauteur du joueur 1
+        int player2Height = 300; //La hauteur du joueur 2
+
+        float ballSize = 0.1f; // Taille de la balle
+
+        Color backgroundColor = Color.Black; //Couleur de font
+
+        Color player1Color = Color.Blue; //Couleur du joueur à gauche
+        Color player2Color = Color.Green; //Couleur du jouer à droite
+
+
+        //Importer
+        string ballImg = "bille"; //Image du ballon
+        string music = "arcade"; //Musique de font
+
+
         string menuFont = "Font"; //Font du menu
         string scoreFont = "pixelart"; //Font du score
-        string music = "arcade";
+
+
 
         #region Autre Variables
 
@@ -131,8 +143,8 @@ namespace Pong
         protected override void Initialize()
         {
             // Charge les polices utilisées pour les différents textes.
-            _font = Content.Load<SpriteFont>($"Font/{menuFont}");
-            _scoreFont = Content.Load<SpriteFont>($"Font/{scoreFont}");
+            _font = Content.Load<SpriteFont>($"{menuFont}");
+            _scoreFont = Content.Load<SpriteFont>($"{scoreFont}");
 
             // Affiche le menu principal au lancement.
             GameStateManager.ChangeState(GameState.Menu);
@@ -172,10 +184,10 @@ namespace Pong
             };
 
             // Charge l'image utilisée pour représenter la balle.
-            Texture2D ballTexture = Content.Load<Texture2D>($"Img/{ballImg}");
+            Texture2D ballTexture = Content.Load<Texture2D>($"{ballImg}");
 
             // Crée la balle avec son image et sa direction de déplacement.
-            _ball = new Ball(new SpriteGeneric(ballTexture), direction);
+            _ball = new Ball(new SpriteGeneric(ballTexture), direction, ballSize);
 
             // Positionne la balle au centre de la résolution virtuelle.
             _ball.SpriteGeneric.Position = new Vector2(
@@ -198,7 +210,7 @@ namespace Pong
             // Initialise le SpriteBatch, utilisé pour dessiner les images et les textes.
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            _gameplayMusic = Content.Load<Song>($"Music/{music}");
+            _gameplayMusic = Content.Load<Song>($"{music}");
 
             _audio = new AudioManager();
             _audio.SetMusicVolume(10f);
@@ -298,7 +310,7 @@ namespace Pong
 
             // Remplit toute la fenêtre avec un fond noir (bandes noires si les proportions diffèrent).
             GraphicsDevice.Viewport = new Viewport(0, 0, w, h);
-            GraphicsDevice.Clear(backgrounColor);
+            GraphicsDevice.Clear(backgroundColor);
 
             // Échelle qui adapte le jeu à la fenêtre sans déformation.
             float scale = Math.Min(

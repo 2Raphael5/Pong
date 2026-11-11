@@ -4,13 +4,15 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Font/Font.spritefont</File>
-    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Font/pixelart.ttf</File>
-    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Img/football.png</File>
-    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Img/hello_kitty.png</File>
-    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Music/arcade.mp3</File>
+    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/arcade.mp3</File>
+    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/balle.png</File>
+    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/bille.png</File>
+    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Font.spritefont</File>
+    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/football.png</File>
+    <File>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/pixelart.ttf</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

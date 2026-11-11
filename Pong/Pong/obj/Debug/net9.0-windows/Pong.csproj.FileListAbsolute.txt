@@ -25,7 +25,6 @@ C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Futur-En-Tout-Genre\Pong\Pong\o
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Futur-En-Tout-Genre\Pong\Pong\obj\Debug\net9.0-windows\ref\Pong.dll
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Futur-En-Tout-Genre\Pong\Pong\bin\Debug\net9.0-windows\Content\Font\Font.xnb
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Futur-En-Tout-Genre\Pong\Pong\obj\Debug\net9.0-windows\Pong.sourcelink.json
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Font\Font.xnb
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Pong.exe
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Pong.deps.json
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Pong.runtimeconfig.json
@@ -52,8 +51,10 @@ C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Debug\n
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Debug\net9.0-windows\Pong.pdb
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Debug\net9.0-windows\Pong.genruntimeconfig.cache
 C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\obj\Debug\net9.0-windows\ref\Pong.dll
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Img\hello_kitty.xnb
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Img\football.xnb
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Font\pixelart.xnb
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Music\arcade.wma
-C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Music\arcade.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\arcade.wma
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\arcade.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\Font.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\football.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\pixelart.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\bille.xnb
+C:\Users\Admin\Documents\CFPTI\2026-2027\ATAP\07_Pong\Pong\Pong\Pong\bin\Debug\net9.0-windows\Content\balle.xnb
