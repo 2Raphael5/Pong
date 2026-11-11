@@ -92,7 +92,7 @@ namespace Class.Generic
                 Texture,                         // Image à afficher.
                 Position,                        // Position sur l'écran.
                 SourceRectangle,                 // Partie de l'image à afficher.
-                Tint,                            // Couleur de l'image.
+                Color.White,                     // Couleur de l'image.
                 MathHelper.ToRadians(rotation),  // Angle de rotation en radians.
                 origin,                          // Point de rotation.
                 size,                            // Taille de l'image (échelle).

@@ -1,2 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/balle.png","C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/bin/Windows/balle.xnb","TextureProcessor","Texture2DContent",133491,1000085,0,0930887
+"C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/Font.spritefont","C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/bin/Windows/Font.xnb","FontDescriptionProcessor","SpriteFontContent",2069,1053721,0,2129882
+"C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/FontScore.spritefont","C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/bin/Windows/FontScore.xnb","FontDescriptionProcessor","SpriteFontContent",2069,1053721,0,0780567

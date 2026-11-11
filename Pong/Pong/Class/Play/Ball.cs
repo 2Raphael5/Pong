@@ -16,7 +16,7 @@ namespace Pong.Class.Play
         private const float SpeedBoost = 1.05f;
 
         // Vitesse maximale de la balle (px/s).
-        private const float MaxSpeed = 3000f;
+        private const float MaxSpeed = 2000f;
 
         // Distance maximale parcourue par la balle en un seul pas de simulation (px).
         // Doit rester inférieure à la largeur d'une raquette pour éviter le tunneling.

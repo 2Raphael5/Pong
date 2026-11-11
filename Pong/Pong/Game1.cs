@@ -29,28 +29,33 @@ namespace Pong
         private AudioManager _audio;
         private Song _gameplayMusic;
 
-        float player1Speed = 2000f;
-        float player2Speed = 2000f;
+        float player1Speed = 800f;
+        float player2Speed = 800f;
 
-        int player1Width = 20;
+        int player1Width = 10;
         int player2Width = 10;
 
-        int player1Height = 300;
-        int player2Height = 300;
+        int player1Height = 200;
+        int player2Height = 200;
 
         float ballSize = 0.1f;
 
         Color backgroundColor = Color.Black;
 
-        Color player1Color = Color.Blue;
-        Color player2Color = Color.Green;
+        Color player1Color = Color.White;
+        Color player2Color = Color.White;
+
+        Color terrainColor = Color.White;
+        int terrainThickness = 5;
+        int lineThickness = 20;
+        int nbPoint = 21;
 
         // Ressources du jeu.
         string ballImg = "bille";
         string music = "arcade";
 
         string menuFont = "Font";
-        string scoreFont = "pixelart";
+        string scoreFont = "FontScore";
 
         #region Autres Variables
 
@@ -115,7 +120,6 @@ namespace Pong
             // Chargement des polices.
             _font = Content.Load<SpriteFont>(menuFont);
             _scoreFont = Content.Load<SpriteFont>(scoreFont);
-
             // Affiche le menu principal.
             GameStateManager.ChangeState(GameState.Menu);
 
@@ -131,7 +135,7 @@ namespace Pong
                 new Player(
                     new PixelGeneric(
                         new Vector2(
-                            0,
+                            5,
                             (VirtualHeight - player1Height) / 2
                         ),
                         player1Color
@@ -145,7 +149,7 @@ namespace Pong
                 new Player(
                     new PixelGeneric(
                         new Vector2(
-                            VirtualWidth - player2Width,
+                            VirtualWidth - player2Width - 5,
                             (VirtualHeight - player2Height) / 2
                         ),
                         player2Color
@@ -392,6 +396,14 @@ namespace Pong
                 scoreP2,
                 this
             );
+            _hud.DrawTerrain(
+                _spriteBatch,
+                this,
+                terrainColor,
+                terrainThickness,
+                lineThickness,
+                nbPoint
+                );
         }
 
         // Réinitialisation et lancement d'une partie.

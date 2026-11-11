@@ -1,4 +1,6 @@
-﻿using Class.Menu;
+﻿using Class.DebugTools;
+using Class.Generic;
+using Class.Menu;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using SharpDX.Direct2D1;
@@ -11,20 +13,27 @@ namespace Class
 {
     public class Hud
     {
-        private readonly SpriteFont _font;
+        private readonly SpriteFont Font;
         public Hud(SpriteFont font)
         {
-            _font = font;
+            Font = font;
         }
         public void DrawMenue(SpriteBatch spriteBatch, int scoreP1, int scoreP2, Game game)
         {
 
 
-            Vector2 textSize = _font.MeasureString($"J2 : {scoreP2}");
-            spriteBatch.DrawString(_font, $"J1 : {scoreP1}", new Vector2(10, 10), Color.White);
+            Vector2 textSize = Font.MeasureString($"{scoreP2}");
+            spriteBatch.DrawString(Font, $"{scoreP1}", new Vector2(game.Window.ClientBounds.Width/4, game.Window.ClientBounds.Height / 10), Color.White);
 
-            spriteBatch.DrawString(_font, $"J2: {scoreP2}", new Vector2(game.Window.ClientBounds.Width - textSize.X - 10, 10), Color.White);
-            //_mainMenu.Draw(_spriteBatch, _font, new Vector2((_graphics.PreferredBackBufferWidth - textSize.X) / 2f, (_graphics.PreferredBackBufferHeight - textSize.Y) / 2f));
+            spriteBatch.DrawString(Font, $"{scoreP2}", new Vector2(game.Window.ClientBounds.Width- textSize.X - game.Window.ClientBounds.Width / 4, game.Window.ClientBounds.Height / 10), Color.White);            
+        }
+
+        public void DrawTerrain(SpriteBatch spriteBatch, Game game, Color lineColor, int terrainThickness= 1, int lineThickness = 1, int nbPoint = 10)
+        {
+            PrimitiveRenderer.DrawLinePoint(spriteBatch, new Vector2(game.Window.ClientBounds.Width/2, 0), new Vector2(game.Window.ClientBounds.Width / 2, game.Window.ClientBounds.Height), nbPoint, lineColor, lineThickness);
+            //PrimitiveRenderer.DrawRectangle(spriteBatch, new Microsoft.Xna.Framework.Rectangle(0,0, game.Window.ClientBounds.Width, game.Window.ClientBounds.Height), lineColor, terrainThickness);
+            PrimitiveRenderer.DrawLine(spriteBatch, new Vector2(0, 0), new Vector2(game.Window.ClientBounds.Width, 0), lineColor, terrainThickness);
+            PrimitiveRenderer.DrawLine(spriteBatch, new Vector2(0, game.Window.ClientBounds.Height- terrainThickness), new Vector2(game.Window.ClientBounds.Width, game.Window.ClientBounds.Height - terrainThickness), lineColor, terrainThickness);
         }
 
     }

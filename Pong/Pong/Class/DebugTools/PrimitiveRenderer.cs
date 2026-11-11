@@ -55,5 +55,24 @@ namespace Class.DebugTools
             DrawTriangle(spriteBatch, end, arrowP1, arrowP2, color, thickness);
         }
 
+        public static void DrawLinePoint(SpriteBatch spriteBatch, Vector2 start, Vector2 end, int nbPoints, Color color, int thickness = 1)
+        {
+            if (nbPoints <= 0)
+                return;
+
+            if (nbPoints == 1)
+            {
+                DrawPoint(spriteBatch, Vector2.Lerp(start, end, 0.5f), color, thickness);
+                return;
+            }
+
+            for (int i = 0; i < nbPoints; i++)
+            {
+                float t = i / (float)(nbPoints - 1);
+                Vector2 position = Vector2.Lerp(start, end, t);
+
+                DrawPoint(spriteBatch, position - new Vector2(thickness / 2f), color, thickness);
+            }
+        }
     }
 }

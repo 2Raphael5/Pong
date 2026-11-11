@@ -38,7 +38,7 @@ namespace Class.Menu
             for (int i = 0; i < _options.Length; i++)
             {
                 Color color = (i == _selectedIndex) ? Color.Yellow : Color.White;
-                Vector2 position = startPosition + new Vector2(0, i * 40);
+                Vector2 position = startPosition + new Vector2(0, i * 100);
                 spriteBatch.DrawString(font, _options[i], position, color);
             }
         }

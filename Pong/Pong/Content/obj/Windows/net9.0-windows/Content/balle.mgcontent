@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/Pong/Pong/Pong/Content/balle.png</SourceFile>
-  <SourceTime>2026-11-11T13:28:08.7123439+01:00</SourceTime>
-  <DestFile>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/Pong/Pong/Pong/Content/bin/Windows/Content/balle.xnb</DestFile>
-  <DestTime>2026-11-11T13:43:08.5967897+01:00</DestTime>
+  <SourceFile>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/balle.png</SourceFile>
+  <SourceTime>2026-11-10T14:03:34.3150372+01:00</SourceTime>
+  <DestFile>C:/Users/Admin/Documents/CFPTI/2026-2027/ATAP/07_Pong/Pong/Pong/Pong/Content/bin/Windows/Content/balle.xnb</DestFile>
+  <DestTime>2026-11-11T13:44:25.0241652+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2026-08-14T23:50:10+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
